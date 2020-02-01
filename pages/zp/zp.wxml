@@ -5,7 +5,7 @@
   </view>
   <view class="rollwheel-container">
     <view animation="{{animationInfo}}" class="roll-wheel"/>
-    <view catchTap="onRollWheel" class="roll-btn"/>
+    <view bindtap="onRollWheel" class="roll-btn"/>
     <image class="money" mode="scaleToFill" src="../../image/money.png"/>
   </view>
   <view class="history" wx:if="{{name}}">
@@ -19,7 +19,7 @@
     活动时间：
     2020年2月10日-2020年2月14日。
     领奖说明：
-    1、领奖说明1；
+    1、领奖说明1领奖说明1领奖说明1领奖说明1领奖说明1领奖说明1领奖说明1；
     2、领奖说明2。
       </text>
       <view class="bottom">
