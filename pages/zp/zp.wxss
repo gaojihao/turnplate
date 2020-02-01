@@ -1,123 +1,148 @@
-page {
-  background: #fff;
+.root{
+    width: 750rpx;
+    height: 1861rpx;
+    background-image: url(../../image/bg.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* 转盘 */
-.canvas-container {
-  margin: 0 auto;
+.rollwheel-container{
   position: relative;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  box-shadow: 0 2px 3px #333, 0 0 2px #000;
+  width: 750rpx;
+  height: 761rpx;
+  margin-top: 45vw;
 }
-.canvas-content {
+
+.roll-wheel{
+  background-image: url(../../image/item.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  width: 650rpx;
+  height: 650rpx;
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 1;
-  display: block;
-  width: 300px;
-  height: 300px;
-  border-radius: inherit;
-  background-clip: padding-box;
-  background-color: #ffcb3f;
+  left: 50rpx;
+  top: 50rpx;
+  z-index: 20;
 }
-.canvas-element {
-  position: relative;
-  z-index: 1;
-  width: inherit;
-  height: inherit;
-  border-radius: 50%;
-}
-.canvas-list {
+
+.roll-btn{
+  background-image: url(../../image/button.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  width: 174rpx;
+  height: 189rpx;
   position: absolute;
-  left: 0;
-  top: 0;
-  width: inherit;
-  height: inherit;
-  z-index: 9999;
+  z-index: 999;
+  left: 288rpx;
+  top: 272rpx;
+  z-index: 90;
 }
-.canvas-item {
+
+.money{
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  color: #e4370e;
+  bottom: -30rpx;
+  width: 384.7rpx;
+  height: 429rpx;
+  left: 182.6rpx;
+}
+
+.people{
+  position: absolute;
+  top: 115vw;
+  z-index: 110;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100vw;
+}
+
+.people-left{
+  margin-left: 20rpx;
+  width: 147rpx;
+  height: 258rpx;
+}
+
+.people-right{
+  margin-right: 60rpx;
+  height: 167rpx;
+  width: 132rpx;
+}
+
+
+.history{
+  margin-top: 60rpx;
+  width: 80vw;
+  height: 80rpx;
+  border-radius: 40rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F27C27;
+}
+
+.text-normal{
+  padding-top: 4rpx;
+  font-size: 26rpx;
   font-weight: bold;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6);
+  color: #fff;
 }
-.canvas-item-text {
+
+.text-small{
+  font-size: 22rpx;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.rule{
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  align-items: center;
   position: relative;
-  display: block;
-  padding-top: 20px;
-  margin: 0 auto;
-  text-align: center;
-  -webkit-transform-origin: 50% 150px;
-  transform-origin: 50% 150px;
 }
 
-/* 分隔线 */
-.canvas-line {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: inherit;
-  height: inherit;
-  z-index: 99;
-}
-.canvas-litem {
-  position: absolute;
-  left: 150px;
-  top: 0;
-  width: 1px;
-  height: 150px;
-  background-color: rgba(228, 55, 14, 0.4);
-  overflow: hidden;
-  -webkit-transform-origin: 50% 150px;
-  transform-origin: 50% 150px;
+.rule-title{
+  background-image: url(../../image/title.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  width: 393rpx;
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #d35400;
+  z-index: 100;
+  padding-bottom: 6rpx;
 }
 
-/**
-* 抽奖按钮
-*/
-.canvas-btn {
-  position: absolute;
-  left: 110px;
-  top: 110px;
-  z-index: 400;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  color: #f4e9cc;
-  background-color: #e44025;
-  line-height: 80px;
-  text-align: center;
-  font-size: 20px;
-  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.6);
-  text-decoration: none;
+.rule-content{
+  background-color: #FEE3AE;
+  padding-left: 30rpx;
+  padding-top: 60rpx;
+  padding-right: 30rpx;
+  padding-bottom: 40rpx;
+  font-size: 24rpx;
+  border-radius: 16rpx;
+  position:absolute;
+  top: 45rpx;
+  color: #333333;
 }
-.canvas-btn::after {
-  position: absolute;
-  display: block;
-  content: ' ';
-  left: 10px;
-  top: -46px;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  border-width: 30px;
-  border-style: solid;
-  border-color: transparent;
-  border-bottom-color: #e44025;
-}
-.canvas-btn.disabled {
-  pointer-events: none;
-  background: #b07a7b;
-  color: #ccc;
-}
-.canvas-btn.disabled::after {
-  border-bottom-color: #b07a7b;
+
+.bottom{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
