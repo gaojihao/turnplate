@@ -4,6 +4,7 @@ Page({
   data: {
     animationInfo: {},
     name: null,
+    disable: false,
   },
 
   onReady: function (e) {
@@ -20,6 +21,10 @@ Page({
   },
 
   onRollWheel:function(){
+    const { disable } = this.data
+    if (disable) {
+      return;
+    }
 
     var awardIndex = 8;
     var runNum = 8;//旋转8周
@@ -31,11 +36,13 @@ Page({
 
     this.animation.rotate(this.runDeg).step();
     this.setData({
+      disable: true,
       animationInfo: this.animation.export(),
     });
 
     setTimeout(() => {
       this.setData({
+        disable: false,
         name: "鼠你最电力十足"
       });
     }, 4000)
